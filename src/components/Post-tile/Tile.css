@@ -1,0 +1,71 @@
+.tile{
+    width: 300px;
+    color: white;
+    margin: 2rem 1rem 2rem 1rem;
+    border-radius: 25px;
+}
+
+.tile .wrapper{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.tile img{
+    width: 300px;
+    border-radius: 5px;
+    vertical-align: middle;
+    transition: 1s ease-out;
+
+    &:hover{
+        scale: 1.07;
+    }
+}
+
+.tile a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 7rem;
+    height: 2rem;
+}
+
+.tile button{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 50px;
+    border: none;
+    background: var(--button-blue);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1rem;
+
+    & img{
+        position: absolute;
+        width: 2rem;
+        right: -2rem;
+        opacity: 0;
+        transition: 0.3s ease-in;
+    }
+
+    &:hover{
+        padding-right: 1.5rem;
+        background: var(--button-action);
+        
+        & img{
+            opacity: 1;
+            right: 0.5rem;
+            transition: 0.3s ease-out;
+        }
+    }
+}

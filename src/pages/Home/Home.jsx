@@ -1,0 +1,43 @@
+import React from "react";
+import "./Home.css";
+import data from "../../testData/testData.json";
+import NewTile from "../../components/Post-tile/New-tile/New-tile";
+import HotTile from "../../components/Post-tile/Hot-tile/Hot-tile";
+
+function Home() {
+    return (
+        <section id="home">
+            <div id="welcome">
+                <h1>Welcome to fish blog</h1>
+                <h2>This is blog about quarium hobby wich would help you start your own tank and many more</h2>
+            </div>
+            <img src={process.env.PUBLIC_URL + "/images/home.jpeg"} alt="image of beautiful planted aquarium" />
+            <div id="latest">
+                {data.map((post, index) => {
+                    return (
+                        <NewTile
+                            key={index}
+                            image={post.image}
+                            title={post.title}
+                            text={post.content.substring(0, 100) + "..."}
+                        />
+                    );
+                })}
+            </div>
+            <div id="popular">
+                {data.map((post, index) => {
+                    return (
+                        <HotTile
+                            key={index}
+                            image={post.image}
+                            title={post.title}
+                            text={post.content.substring(0, 100) + "..."}
+                        />
+                    );
+                })}
+            </div>
+        </section>
+    );
+}
+
+export default Home;

@@ -1,0 +1,63 @@
+header{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 3%;
+    width: 100%;
+    background: black;
+    border-bottom: solid var(--blue) 1px;
+}
+
+header h1{
+    color: white;
+    text-align: center;
+    align-self: center;
+    margin: 0;
+    margin-left: 2rem;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    position: relative;
+    right: 20%;
+
+    & p{
+        margin: 0;
+    }
+}
+
+header a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+    transition: 0.5s;
+
+    &:hover{
+        color: var(--action);
+    }
+}
+
+#cart{
+    margin-right: 3rem;
+    align-self: center;
+    border: 0;
+    border-radius: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+
+    & img{
+        height: 3rem;
+        transition: 0.5s;
+        filter: blur(0.5px);
+    }
+
+    & img:hover{
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,8 @@
+#post{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    color: white;
+    margin: 0;
+    padding-top: 1.5rem;
+}

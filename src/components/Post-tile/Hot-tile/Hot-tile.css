@@ -1,0 +1,16 @@
+.hot-container{
+    position: relative;
+
+    & span{
+        z-index: 1;
+        position: absolute;
+        color: white;
+        padding: 0.4rem;
+        font-size: 1.2rem;
+        background: red;
+        border-radius: 5px;
+        top: 1.8rem;
+        right: 1.5rem;
+        font-weight: 600;
+    }
+}
