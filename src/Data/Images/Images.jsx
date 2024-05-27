@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import { storage, ref, getDownloadURL, uploadBytes } from '../firebase';
+import { storage, ref, getDownloadURL, uploadBytes } from '../../Firebase/firebase.js';
 
 const ImageContext = createContext();
 

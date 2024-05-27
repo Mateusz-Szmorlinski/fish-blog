@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
-import data from "../../testData/testData.json";
 import NewTile from "../../components/Post-tile/New-tile/New-tile";
 import HotTile from "../../components/Post-tile/Hot-tile/Hot-tile";
+import { usePosts } from "../../Data/Posts/Posts";
 
 function Home() {
+    const { error, loading, fetchNewPosts, fetchHotPosts  } = usePosts();
+    const [newPosts, setNewPosts] = useState([]);
+    const [hotPosts, setHotPosts] = useState([]);
+
+    if (error) {
+        console.log(error);
+    }
+
+    async function fetchData() {
+        let data = await fetchNewPosts();
+        setNewPosts(data);
+        data = await fetchHotPosts();
+        setHotPosts(data);
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     return (
         <section id="home">
             <div id="welcome">
@@ -13,7 +32,7 @@ function Home() {
             </div>
             <img src={process.env.PUBLIC_URL + "/images/home.jpeg"} alt="image of beautiful planted aquarium" />
             <div id="latest">
-                {data.map((post, index) => {
+                {newPosts && newPosts.length > 0 ? (newPosts.map((post, index) => {
                     return (
                         <NewTile
                             key={index}
@@ -22,10 +41,10 @@ function Home() {
                             text={post.content.substring(0, 100) + "..."}
                         />
                     );
-                })}
+                })) : <p>Loading...</p>}
             </div>
             <div id="popular">
-                {data.map((post, index) => {
+                {hotPosts && hotPosts.length > 0 ? (hotPosts.map((post, index) => {
                     return (
                         <HotTile
                             key={index}
@@ -34,7 +53,7 @@ function Home() {
                             text={post.content.substring(0, 100) + "..."}
                         />
                     );
-                })}
+                })) : <p>Loading...</p>}
             </div>
         </section>
     );

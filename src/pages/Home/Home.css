@@ -31,13 +31,13 @@
     color: white;
 
     & h1{
-        font-size: 5rem;
+        font-size: 5em;
         animation: expand 0.7s ease-out;
         text-shadow: 4px 2px var(--blue), 4px -2px var(--action);
     }
 
     & h2{
-        font-size: 3rem;
+        font-size: 3em;
         text-shadow: 4px 2px var(--blue), 4px -2px var(--action);
         /* animation: expand 1s ease-out; */
     }

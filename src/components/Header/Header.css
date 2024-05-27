@@ -7,7 +7,7 @@ header{
     height: 3%;
     width: 100%;
     background: black;
-    border-bottom: solid var(--blue) 1px;
+    /* border-bottom: solid var(--blue) 1px; */
 }
 
 header h1{
@@ -23,8 +23,9 @@ header ul{
     display: flex;
     flex-direction: row;
     gap: 5rem;
-    position: relative;
-    right: 20%;
+    flex-grow: 1;
+    margin-left: 10%;
+
 
     & p{
         margin: 0;
@@ -37,10 +38,10 @@ header a{
     color: white;
     margin: 0;
     transition: 0.5s;
+}
 
-    &:hover{
-        color: var(--action);
-    }
+header .nav-link:hover{
+    color: var(--action);
 }
 
 #cart{

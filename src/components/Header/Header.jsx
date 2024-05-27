@@ -5,11 +5,11 @@ import "./Header.css";
 function Header() {
     return(
         <header>
-            <h1>brand</h1>
+            <h1><a href="/">Fish Blog</a></h1>
             <ul>
-                <li><a href="#">navlink1</a></li>
-                <li><a href="#">navlink2</a></li>
-                <li><a href="#">navlink3</a></li>
+                <li><a className="nav-link" href="/">HOME</a></li>
+                <li><a className="nav-link" href="/about">About</a></li>
+                <li><a className="nav-link" href="/posts">Posts</a></li>
             </ul>
         </header>
     );
