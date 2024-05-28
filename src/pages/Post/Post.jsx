@@ -39,11 +39,13 @@ function Post() {
         }
     }, [postData]);
 
-    return(
+    return (
         <section id="post">
-            {postData ? (<><h2>{postData.title}</h2>
-            {image ? <img src={image} alt="Blog Post" /> : <p>Loading...</p>}
-            <p>{postData.content}</p></>) : <p>Loading...</p>}
+            <div id="main">
+                {image ? <img src={image} alt="Blog Post" /> : <p>Loading...</p>}
+                {postData ? (<h1>{postData.title}</h1>) : <p>Loading...</p>}
+            </div>
+            {postData ? (<p>{postData.content}</p>) : <p>Loading...</p>}
         </section>
     );
 }

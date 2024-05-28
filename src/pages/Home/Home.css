@@ -11,6 +11,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 1rem 0 1rem;
+    justify-content: center;
 }
 
 #home #popular{
@@ -18,6 +19,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 1rem 0 1rem;
+  justify-content: center;
 }
 
 #home #welcome{
@@ -32,13 +34,13 @@
 
 
     & h1{
-        font-size: 5em;
+        font-size: 5rem;
         animation: expand 0.7s ease-out;
         text-shadow: 4px 2px var(--blue), 4px -2px var(--action);
     }
 
     & h2{
-        font-size: 3em;
+        font-size: 3rem;
         text-shadow: 4px 2px var(--blue), 4px -2px var(--action);
         /* animation: expand 1s ease-out; */
     }

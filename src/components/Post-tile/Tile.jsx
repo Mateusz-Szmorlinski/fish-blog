@@ -23,7 +23,7 @@ function Tile(props) {
     return (
         <div className="tile">
             <div className="wrapper">
-                {image ? <img src={image} alt="Blog Post" /> : <p>Loading...</p>}
+                {image ? <img src={image}/> : <p>Loading...</p>}
             </div>
             <h3>{props.title}</h3>
             <p>{props.text}</p>

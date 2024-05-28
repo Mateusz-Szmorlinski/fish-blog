@@ -8,8 +8,8 @@ function Header() {
             <h1><a href="/">Fish Blog</a></h1>
             <ul>
                 <li><a className="nav-link" href="/">HOME</a></li>
-                <li><a className="nav-link" href="/about">About</a></li>
                 <li><a className="nav-link" href="/posts">Posts</a></li>
+                <li><a className="nav-link" href="/about">About</a></li>
             </ul>
         </header>
     );
