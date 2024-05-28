@@ -9,9 +9,9 @@ function Header() {
             <h1><a href="/">Fish Blog</a></h1>
             <ul>
                 
-                <li><NavLink className="nav-link" href="/">HOME</NavLink></li>
-                <li><NavLink className="nav-link" href="/posts">Posts</NavLink></li>
-                <li><NavLink className="nav-link" href="/about">About</NavLink></li>
+                <li><NavLink className="nav-link" to={"/"}>HOME</NavLink></li>
+                <li><NavLink className="nav-link" to={"/posts"}>Posts</NavLink></li>
+                <li><NavLink className="nav-link" to={"/about"}>About</NavLink></li>
             </ul>
         </header>
     );
