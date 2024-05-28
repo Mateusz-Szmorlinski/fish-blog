@@ -3,6 +3,7 @@ import "./Post.css";
 import { useParams } from "react-router-dom";
 import { useImage } from "../../Data/Images/Images";
 import { usePosts } from "../../Data/Posts/Posts";
+import NotFound from "../NotFound/NotFound";
 
 function Post() {
     const { fetchImageURL } = useImage();
@@ -39,15 +40,21 @@ function Post() {
         }
     }, [postData]);
 
-    return (
-        <section id="post">
-            <div id="main">
-                {image ? <img src={image} alt="Blog Post" /> : <p>Loading...</p>}
-                {postData ? (<h1>{postData.title}</h1>) : <p>Loading...</p>}
-            </div>
-            {postData ? (<p>{postData.content}</p>) : <p>Loading...</p>}
-        </section>
-    );
+    if (postData !== null) {
+        return (
+            <section id="post">
+                <div id="main">
+                    {image ? <img src={image} alt="Blog Post" /> : <p>Loading...</p>}
+                    {postData ? (<h1>{postData.title}</h1>) : <p>Loading...</p>}
+                </div>
+                {postData ? (<p>{postData.content}</p>) : <p>Loading...</p>}
+            </section>
+        );
+    } else {
+        return <NotFound />
+    }
+
+    
 }
 
 export default Post;
