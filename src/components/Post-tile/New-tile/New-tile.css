@@ -1,7 +1,8 @@
 .new-container{
     position: relative;
 
-    & span{
+    & .new{
+        font-family: "Quicksand", sans-serif;
         z-index: 1;
         position: absolute;
         color: white;

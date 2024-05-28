@@ -1,7 +1,8 @@
 .hot-container{
     position: relative;
 
-    & span{
+    & .hot{
+        font-family: "Quicksand", sans-serif;
         z-index: 1;
         position: absolute;
         color: white;

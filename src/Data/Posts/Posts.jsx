@@ -16,11 +16,27 @@ export const PostsProvider = ({ children }) => {
     async function fetchPosts() {
         setLoading(true);
         try {
-            const query = await getDocs(collection(db, "posts"), limit(10));
+            const query = await getDocs(collection(db, "posts"), orderBy("timestamp", "desc"), limit(20));
             const postsData = query.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()
             }));
+            setLoading(false);
+            return postsData;
+        } catch (err) {
+            setError("Error fetching posts: " + err);
+            setLoading(false);
+        }
+    };
+
+    async function fetchSearchPosts(field, value) {
+        setLoading(true);
+        try {
+            const query = await getDocs(collection(db, "posts"));
+            const postsData = query.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            })).filter(post => post[field].toLowerCase().includes(value.toLowerCase()));
             setLoading(false);
             return postsData;
         } catch (err) {
@@ -85,7 +101,7 @@ export const PostsProvider = ({ children }) => {
     }
 
     return (
-        <PostsContext.Provider value={{ error, loading, fetchOnePost, fetchPosts, fetchNewPosts, fetchHotPosts }}>
+        <PostsContext.Provider value={{ error, loading, fetchOnePost, fetchPosts, fetchNewPosts, fetchHotPosts, fetchSearchPosts}}>
             {children}
         </PostsContext.Provider>
     );

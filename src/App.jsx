@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Post from "./pages/Post/Post";
-import Posts from "./pages/Posts/Posts.jsx";
+import Posts from "./pages/Posts/Posts";
 import { Route, Routes } from "react-router-dom";
 import { ImageProvider } from "./Data/Images/Images.jsx";
 import { PostsProvider } from "./Data/Posts/Posts.jsx";
@@ -24,7 +24,7 @@ function App() {
                         element={<Post />}
                     />
                     <Route path="/about" element={<About />}/>
-                    <Route path="/post" element={<Posts />}/>
+                    <Route path="/posts" element={<Posts />}/>
                     {/* <Route path="/*" element={<NotFound />} /> */}
                 </Routes>
                 <Footer />

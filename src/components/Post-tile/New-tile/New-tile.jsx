@@ -5,7 +5,7 @@ import "./New-tile.css";
 function NewTile(props) {
     return (
         <div className="new-container">
-            <span>NEW</span>
+            <span className="new">NEW</span>
             <Tile
                 image={props.image}
                 title={props.title}

@@ -69,3 +69,7 @@
         }
     }
 }
+
+.tile span {
+    background: var(--action);
+}

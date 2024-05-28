@@ -30,6 +30,7 @@
     justify-content: center;
     color: white;
 
+
     & h1{
         font-size: 5em;
         animation: expand 0.7s ease-out;

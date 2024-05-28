@@ -5,7 +5,7 @@ import "./Hot-tile.css";
 function HotTile(props) {
     return (
         <div className="hot-container">
-            <span>HOT</span>
+            <span className="hot">HOT</span>
             <Tile
                 image={props.image}
                 title={props.title}
