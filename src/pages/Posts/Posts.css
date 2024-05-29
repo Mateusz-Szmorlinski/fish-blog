@@ -86,7 +86,7 @@
     height: 5rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-aspect-ratio: 1/1) {
     #posts #content{
         flex-direction: column;
         align-self: center;

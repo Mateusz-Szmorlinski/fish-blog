@@ -50,7 +50,7 @@
     margin-right: 3rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-aspect-ratio: 1/1) {
     #post{
         width: 80%;
         align-self: center;

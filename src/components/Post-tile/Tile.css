@@ -38,7 +38,7 @@
     height: 2rem;
 }
 
-.tile button{
+/* .tile button{
     position: relative;
     display: flex;
     overflow: hidden;
@@ -75,23 +75,19 @@
             transition: 0.3s ease-out;
         }
     }
-}
-
-.tile span {
-    background: var(--action);
-}
+} */
 
 .tile .loading{
     width: 5rem;
     height: 5rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-aspect-ratio: 1/1) {
 
     .tile{
         width: 100%;
     }
-    
+
     .tile .wrapper{
         width: 100%;
         height: auto;

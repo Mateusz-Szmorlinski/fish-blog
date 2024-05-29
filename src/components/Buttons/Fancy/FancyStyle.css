@@ -29,9 +29,9 @@ button::before{
 
 button:hover{
     letter-spacing: 0.25rem;
-    color: rgb(30, 197, 66);
-    background-color: rgb(30, 197, 66);
-    box-shadow: 0 0 20px rgb(30, 197, 66);
+    color: var(--blue);
+    background-color: var(--blue);
+    box-shadow: 0 0 20px var(--blue);
 
 }
 
@@ -61,7 +61,7 @@ button:hover i::before{
 button i::after{
     content: "";
     position: absolute;
-    bottom: -4px;
+    bottom: -3px;
     left: 20%;
     width: 10px;
     height: 3px;

@@ -3,6 +3,7 @@ import "./Tile.css";
 import { NavLink } from "react-router-dom";
 import { useImage } from "../../Data/Images/Images";
 import Loading from "../Loading/Loading";
+import FancyButton from "../Buttons/Fancy/FancyButton";
 
 function Tile(props) {
     const { fetchImageURL } = useImage();
@@ -28,7 +29,8 @@ function Tile(props) {
             </div>
             <h3>{props.title}</h3>
             <p>{props.text}</p>
-            <NavLink to={"/posts/" + props.title}><button>read<img src="./icons/arrow.svg" /></button></NavLink>
+            {/* <NavLink to={"/posts/" + props.title}><button>read<img src="./icons/arrow.svg" /></button></NavLink> */}
+            <NavLink to={"/posts/" + props.title}><FancyButton text={"read"} /></NavLink>
         </div>
     );
 }
