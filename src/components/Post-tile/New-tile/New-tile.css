@@ -19,10 +19,12 @@
 @media screen and (max-aspect-ratio: 1/1) {
     .new-container{
         margin: 4rem 0 4rem 0;
-    }
 
-    .new{
-        font-size: 5rem;
-        padding: 1rem;
+        & .new{
+            font-size: 5rem;
+            padding: 1rem;
+        }
     }
 }
+
+    

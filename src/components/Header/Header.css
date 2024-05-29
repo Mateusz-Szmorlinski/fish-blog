@@ -1,64 +1,97 @@
-header{
+header {
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     align-items: center;
     justify-content: space-between;
-    height: 10svh;
+    height: 8%;
     width: 100%;
     background: black;
 }
 
-header h1{
+header h1 {
     color: white;
     text-align: center;
     align-self: center;
     margin: 0;
-    margin-left: 2rem;
+
 }
 
-header ul{
+header ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     gap: 5rem;
     flex-grow: 1;
     margin-left: 10%;
-
-
-    & p{
-        margin: 0;
-    }
 }
 
-header a{
+header a {
     text-decoration: none;
     font-size: 2rem;
     color: white;
     margin: 0;
+    margin-left: 2rem;
     transition: 0.5s;
 }
 
-header .nav-link:hover{
+header .nav-link:hover {
     color: var(--action);
 }
 
-#cart{
+header #burger-button {
     margin-right: 3rem;
-    align-self: center;
-    border: 0;
-    border-radius: 15px;
-    transition: 0.5s;
+    background: none;
+    border: none;
     cursor: pointer;
 
-    & img{
-        height: 3rem;
-        transition: 0.5s;
-        filter: blur(0.5px);
+    & img {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+header #burger-nav {
+    position: absolute;
+    width: 100%;
+    height: 105svh;
+    left: 0;
+    background: black;
+    transition: 0.3s ease-out;
+    z-index: 9;
+
+    & ul {
+        position: relative;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+        top: 50%;
+        transform: translate(0%, -70%);
     }
 
-    & img:hover{
-        transform: scale(1.1);
+    & button {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    & img {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    header {
+        height: 10svh;
+    }
+
+    header a {
+        font-size: 5rem;
     }
 }

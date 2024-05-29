@@ -12,9 +12,12 @@ body {
     padding: 0;
     background: black;
 
-        /* font-family: "Poppins", sans-serif;
+    & p {
+        font-family: "Poppins", sans-serif;
         font-weight: 700;
-        font-style: normal; */
+        font-style: normal;
+    }
+        
 
 
     & h1, h2, h3, button, a {

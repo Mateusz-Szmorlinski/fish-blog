@@ -19,10 +19,10 @@
 @media screen and (max-aspect-ratio: 1/1) {
     .hot-container{
         margin: 4rem 0 4rem 0;
-    }
 
-    .hot{
-        font-size: 5rem;
-        padding: 1rem;
-    }
+        & .hot{
+            font-size: 5rem;
+            padding: 1rem;
+        }
+    } 
 }

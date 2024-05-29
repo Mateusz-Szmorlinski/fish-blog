@@ -41,7 +41,7 @@ function Footer() {
                     <li><a href="">adiuvat</a></li>
                 </ul>
             </div> */}
-            <p><span>@Copyrights {year} Mateusz Szmorliński</span></p>
+            <p>@Copyrights {year} Mateusz Szmorliński</p>
         </footer>
         </>        
     );
