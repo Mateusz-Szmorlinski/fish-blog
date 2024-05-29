@@ -8,6 +8,7 @@
 }
 
 #posts #content{
+    align-self: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -23,7 +24,7 @@
     align-self: center;
     border-radius: 30px;
     background: white;
-    height: 10svh;
+    height: 3rem;
 
     & input{
         position: absolute;
@@ -85,11 +86,6 @@
 }
 
 @media screen and (max-width: 800px) {
-    #posts{
-        width: 90%;
-        align-self: center;
-    }
-
     #posts #content{
         flex-direction: column;
         align-self: center;
