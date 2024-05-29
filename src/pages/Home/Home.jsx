@@ -3,6 +3,7 @@ import "./Home.css";
 import NewTile from "../../components/Post-tile/New-tile/New-tile";
 import HotTile from "../../components/Post-tile/Hot-tile/Hot-tile";
 import { usePosts } from "../../Data/Posts/Posts";
+import Loading from "../../components/Loading/Loading";
 
 function Home() {
     const { error, loading, fetchNewPosts, fetchHotPosts  } = usePosts();
@@ -41,7 +42,7 @@ function Home() {
                             text={post.content.substring(0, 100) + "..."}
                         />
                     );
-                })) : <p>Loading...</p>}
+                })) : <Loading />}
             </div>
             <div id="popular">
                 {hotPosts && hotPosts.length > 0 ? (hotPosts.map((post, index) => {
@@ -53,7 +54,7 @@ function Home() {
                             text={post.content.substring(0, 100) + "..."}
                         />
                     );
-                })) : <p>Loading...</p>}
+                })) : <Loading />}
             </div>
         </section>
     );

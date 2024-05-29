@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Tile from "../../components/Post-tile/Tile";
 import { usePosts } from "../../Data/Posts/Posts";
 import "./Posts.css";
+import Loading from "../../components/Loading/Loading";
 
 function Posts() {
     const [item, setItem] = useState("");
@@ -65,10 +66,10 @@ function Posts() {
                         image={post.image}
                         text={post.content.substring(0, 100) + "..."}
                     />);
-                })) : <p>Loading...</p>}
+                })) : <Loading />}
             </div>
 
-            {load && <button id="load">load more</button>}
+            {/* {load && <button id="load">load more</button>} */}
         </section>
     );
 }

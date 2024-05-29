@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Tile.css";
 import { NavLink } from "react-router-dom";
 import { useImage } from "../../Data/Images/Images";
+import Loading from "../Loading/Loading";
 
 function Tile(props) {
     const { fetchImageURL } = useImage();
@@ -23,7 +24,7 @@ function Tile(props) {
     return (
         <div className="tile">
             <div className="wrapper">
-                {image ? <img src={image}/> : <p>Loading...</p>}
+                {image ? <img src={image}/> : <Loading />}
             </div>
             <h3>{props.title}</h3>
             <p>{props.text}</p>

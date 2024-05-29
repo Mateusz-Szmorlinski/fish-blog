@@ -3,8 +3,9 @@ header{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    height: 3%;
+    height: 10svh;
     width: 100%;
     background: black;
 }

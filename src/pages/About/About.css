@@ -21,3 +21,9 @@
 #about img{
     width: 100%;
 }
+
+@media screen and (max-width: 800px) {
+    #about{
+        width: 90%;
+    }
+}

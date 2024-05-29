@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useImage } from "../../Data/Images/Images";
 import { usePosts } from "../../Data/Posts/Posts";
 import NotFound from "../NotFound/NotFound";
+import Loading from "../../components/Loading/Loading";
 
 function Post() {
     const { fetchImageURL } = useImage();
@@ -44,10 +45,11 @@ function Post() {
         return (
             <section id="post">
                 <div id="main">
-                    {image ? <img src={image} alt="Blog Post" /> : <p>Loading...</p>}
-                    {postData ? (<h1>{postData.title}</h1>) : <p>Loading...</p>}
+                    {image ? <img src={image} alt="Blog Post" /> : <Loading />}
+                    {postData && <h1>{postData.title}</h1>}
                 </div>
-                {postData ? (<p>{postData.content}</p>) : <p>Loading...</p>}
+                {postData && <p>{postData.content}</p>}
+                {!postData && <Loading />}
             </section>
         );
     } else {

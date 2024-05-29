@@ -9,6 +9,7 @@
 
 #posts #content{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -22,7 +23,7 @@
     align-self: center;
     border-radius: 30px;
     background: white;
-    height: 3rem;
+    height: 10svh;
 
     & input{
         position: absolute;
@@ -75,5 +76,22 @@
 
     &:hover{
         background: var(--button-action);
+    }
+}
+
+#posts .loading{
+    width: 5rem;
+    height: 5rem;
+}
+
+@media screen and (max-width: 800px) {
+    #posts{
+        width: 90%;
+        align-self: center;
+    }
+
+    #posts #content{
+        flex-direction: column;
+        align-self: center;
     }
 }

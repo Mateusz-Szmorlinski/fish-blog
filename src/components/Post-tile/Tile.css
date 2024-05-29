@@ -2,7 +2,6 @@
     width: 300px;
     color: white;
     margin: 2rem 1rem 2rem 1rem;
-    border-radius: 25px;
 }
 
 .tile h3{
@@ -80,4 +79,25 @@
 
 .tile span {
     background: var(--action);
+}
+
+.tile .loading{
+    width: 5rem;
+    height: 5rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    .tile{
+        width: 100%;
+    }
+    
+    .tile .wrapper{
+        width: 100%;
+        height: auto;
+    }
+
+    .tile img{
+        width: 100%;
+    }
 }
