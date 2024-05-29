@@ -33,9 +33,11 @@
 .tile a{
     display: block;
     text-decoration: none;
-    color: black;
-    width: 7rem;
-    height: 2rem;
+    color: white;
+
+    &:hover{
+        color: var(--action);
+    }
 }
 
 /* .tile button{
@@ -86,6 +88,7 @@
 
     .tile{
         width: 100%;
+        margin: 2rem 0 2rem 0;
     }
 
     .tile .wrapper{
