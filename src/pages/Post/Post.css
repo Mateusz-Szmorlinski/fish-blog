@@ -8,8 +8,9 @@
     padding-top: 1.5rem;
     margin-top: 2rem;
     width: 60%;
-    align-self: center;
     min-height: 70svh;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 #post .loading{
