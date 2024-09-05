@@ -1,10 +1,15 @@
 .tile{
     width: 300px;
+    height: fit-content;
     color: white;
     margin: 2rem 1rem 2rem 1rem;
+    background-color: color-mix(in srgb, var(--action), black 50%);
+    border-radius: 25px;
 }
 
 .tile h3{
+    margin-top: 1rem;
+    padding-bottom: 1rem;
     font-size: 1.5rem;
 }
 
@@ -12,12 +17,20 @@
     font-size: 1.2rem;
 }
 
-.tile .wrapper{
+.tile .image-wrapper{
     position: relative;
     width: 300px;
     height: 200px;
     overflow: hidden;
     border-radius: 5px;
+    
+}
+
+.tile .text-wrapper{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 90%;
 }
 
 .tile img{
@@ -39,45 +52,6 @@
         color: var(--action);
     }
 }
-
-/* .tile button{
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 7rem;
-    height: 2rem;
-    border-radius: 50px;
-    border: none;
-    background: var(--button-blue);
-    color: black;
-    cursor: pointer;
-    transition: 0.3s ease-out;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 1rem;
-
-    & img{
-        position: absolute;
-        width: 2rem;
-        right: -2rem;
-        opacity: 0;
-        transition: 0.3s ease-in;
-    }
-
-    &:hover{
-        padding-right: 1.5rem;
-        background: var(--button-action);
-        
-        & img{
-            opacity: 1;
-            right: 0.5rem;
-            transition: 0.3s ease-out;
-        }
-    }
-} */
 
 .tile .loading{
     width: 5rem;

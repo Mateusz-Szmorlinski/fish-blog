@@ -16,8 +16,8 @@ export const PostsProvider = ({ children }) => {
     async function fetchPosts() {
         setLoading(true);
         try {
-            const query = await getDocs(collection(db, "posts"), orderBy("timestamp", "desc"), limit(20));
-            const postsData = query.docs.map(doc => ({
+            const q = await getDocs(query(collection(db, "posts"), orderBy("date", "desc"), limit(20)));
+            const postsData = q.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()
             }));
@@ -32,8 +32,8 @@ export const PostsProvider = ({ children }) => {
     async function fetchSearchPosts(field, value) {
         setLoading(true);
         try {
-            const query = await getDocs(collection(db, "posts"));
-            const postsData = query.docs.map(doc => ({
+            const q = await getDocs(collection(db, "posts"));
+            const postsData = q.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()
             })).filter(post => post[field].toLowerCase().includes(value.toLowerCase()));
@@ -48,7 +48,7 @@ export const PostsProvider = ({ children }) => {
     async function fetchNewPosts() {
         setLoading(true);
         try {
-            const q = await getDocs(collection(db, "posts"), orderBy("timestamp", "desc"), limit(5));
+            const q = await getDocs(query(collection(db, "posts"), orderBy("date", "desc"), limit(5)));
             const postsData = q.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()
@@ -64,7 +64,7 @@ export const PostsProvider = ({ children }) => {
     async function fetchHotPosts() {
         setLoading(true);
         try {
-            const q = await getDocs(collection(db, "posts"), limit(5));
+            const q = await getDocs(query(collection(db, "posts"), limit(5)));
             const postsData = q.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()
@@ -81,7 +81,7 @@ export const PostsProvider = ({ children }) => {
         setLoading(true);
         try {
             let q = query(collection(db, "posts"), where(field, "==", value));
-            let querySnapshot = await getDocs(q);
+            let querySnapshot = await getDoc(q);
             
             if (querySnapshot.empty) {
                 setLoading(false);

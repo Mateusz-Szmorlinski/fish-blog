@@ -23,11 +23,13 @@ function Tile(props) {
 
     return (
         <div className="tile">
-            <div className="wrapper">
-                {image ? <img src={image}/> : <Loading />}
+            <div className="image-wrapper">
+                {image ? <NavLink to={"/posts/" + props.title}><img src={image}/></NavLink>: <Loading />}
             </div>
-            <h3><NavLink to={"/posts/" + props.title}>{props.title}</NavLink></h3>
-            <p>{props.text}</p>
+            <div className="text-wrapper">
+                <h3><NavLink to={"/posts/" + props.title}>{props.title}</NavLink></h3>
+                {/* <p>{props.text}</p> */}
+            </div>
             {/* <NavLink to={"/posts/" + props.title}><button>read<img src="./icons/arrow.svg" /></button></NavLink> */}
         </div>
     );

@@ -7,11 +7,12 @@
 }
 
 #posts #content{
+    min-width: 85%;
     align-self: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     min-height: 90svh;
 }
 
@@ -21,20 +22,28 @@
     flex-direction: row;
     align-items: center;
     width: 85%;
+    border-radius: 50px;
     align-self: center;
-    border-radius: 30px;
-    background: white;
+    background: rgb(50, 50, 50);
     height: 3rem;
+    transition: ease-out 0.3s;
+
+    &:hover{
+        background: rgb(100,100, 100)
+    }
 
     & input{
         position: absolute;
         width: 90%;
-        left: 1rem;
+        left: 4rem;
+        background: none;
         border: none;
         font-size: 2rem;
+        color: white;
 
         &:focus{
             outline: none;
+            border-bottom: 1px solid white;
         }
     }
 
@@ -45,19 +54,18 @@
 
     & button{
         position: absolute;
-        right: 0.15rem;
+        left: 0.15rem;
         width: 2.7rem;
         height: 2.7rem;
         border: none;
         outline: none;
         border-radius: 50%;
-        background: var(--button-blue);
+        background: white;
         cursor: pointer;
         transition: 0.3s ease-out;
-        
 
         &:hover{
-            background: var(--button-action);
+            background: var(--action);
         }
     }
 }
@@ -89,7 +97,7 @@
     #posts #content{
         margin-top: 4rem;
         align-self: center;
-        align-items: center;
+        justify-content: center;
         width: 85%;
         flex-direction: column;
     }

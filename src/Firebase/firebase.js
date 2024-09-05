@@ -3,11 +3,10 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getStorage, ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
+// Link to all libraries:
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// firebaseConfig: what is used in project
 const firebaseConfig = {
   apiKey: "AIzaSyCvJIj5qyrWXF1qyCudp-YJhWcL0ODlZLk",
   authDomain: "fish-blog-abf39.firebaseapp.com",

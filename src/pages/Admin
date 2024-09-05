@@ -1,6 +1,0 @@
-import "React" from "react";
-
-
-function Admin() {
-    return (<H1>Admin panel</h1>);
-};
