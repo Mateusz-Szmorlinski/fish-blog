@@ -8,15 +8,7 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // firebaseConfig: what is used in project
-const firebaseConfig = {
-  apiKey: "AIzaSyCvJIj5qyrWXF1qyCudp-YJhWcL0ODlZLk",
-  authDomain: "fish-blog-abf39.firebaseapp.com",
-  projectId: "fish-blog-abf39",
-  storageBucket: "fish-blog-abf39.appspot.com",
-  messagingSenderId: "282347077685",
-  appId: "1:282347077685:web:de2a3c6e76553054a5717c",
-  measurementId: "G-63RLERW18J"
-};
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
