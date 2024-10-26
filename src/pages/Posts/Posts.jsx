@@ -11,7 +11,6 @@ function Posts() {
     const { error, loading, fetchPosts, fetchSearchPosts } = usePosts();
 
     async function fetchData() {
-        console.log("fetching in progress...")
         let data = await fetchPosts();
         setPostdData(data);
         setLoad(true);

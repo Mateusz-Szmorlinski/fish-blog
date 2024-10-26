@@ -1,0 +1,82 @@
+/* Container for the cart */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  /* Pricing section */
+  .price-section {
+    margin-bottom: 1rem;
+  }
+  
+  .normal-price {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .crossed-out {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 0.5rem;
+  }
+  
+  .sale-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e53935; /* Attention-grabbing color */
+    display: block;
+  }
+  
+  .savings {
+    font-size: 1.2rem;
+    color: #43a047; /* Green for savings text */
+    margin-top: 0.5rem;
+  }
+  
+  /* Benefits list */
+  .benefits-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .benefit-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .included {
+    color: #4caf50; /* Green for included benefits */
+  }
+  
+  .not-included {
+    color: #f44336; /* Red for not-included benefits */
+  }
+  
+  /* Buy button */
+  .buy-button {
+    background-color: #43a047;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-button:hover {
+    background-color: #388e3c;
+  }
+  

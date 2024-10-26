@@ -33,6 +33,7 @@ export const PostsProvider = ({ children }) => {
         setLoading(true);
         try {
             const q = await getDocs(collection(db, "posts"));
+            console.log(q);
             const postsData = q.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()

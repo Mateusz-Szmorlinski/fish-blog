@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
+import { useUser } from "../../Data/Users/Users";
+import { usePayments } from "../../Data/Payments/Payments";
 
 
 function Header() {
+    const { productPayment, subscriptionPayment } = usePayments();
+    const { currentUser } = useUser();
     const [mobile, setMobile] = useState(false);
     const [visibility, setVisibility] = useState(false);
 
     function toggleVisibility() {
         setVisibility(!visibility);
+    }
+
+    async function payMyBills() {
+        const product = [{ price: "prod_Qk0Kvqw7Mmn1OT"}];
+        await productPayment(product);
     }
 
     useEffect(() => {

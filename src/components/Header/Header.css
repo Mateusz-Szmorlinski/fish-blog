@@ -5,7 +5,7 @@ header {
     align-items: flex-start;
     align-items: center;
     justify-content: space-between;
-    height: 8%;
+    height: 3rem;
     width: 100%;
     background: black;
 }
@@ -21,6 +21,7 @@ header h1 {
 header ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 5rem;
     flex-grow: 1;
@@ -29,7 +30,7 @@ header ul {
 
 header a {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     margin: 0;
     margin-left: 2rem;
