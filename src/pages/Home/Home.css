@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: black;
+  background: var(--black);
 }
 
 #home .loading {
@@ -12,67 +12,116 @@
 }
 
 #home #latest {
+  padding: 4.5rem 0;
   align-self: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
   justify-content: center;
 }
 
 #home #popular {
+  padding: 4.5rem 0;
   align-self: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
   justify-content: center;
 }
 
 #home #welcome {
+  padding-bottom: 5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 4rem;
+  align-items: center;
   text-align: center;
   justify-content: center;
-  color: white;
+  color: var(--white);
 
 
   & h1 {
+    width: 60%;
     font-size: 5rem;
     animation: expand 0.7s ease-out;
-    text-shadow: 4px 2px var(--blue), 4px -2px var(--action);
+    text-shadow: 6px 4px var(--dark-green);
   }
 
   & h2 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
     font-size: 3rem;
     text-shadow: 4px 2px var(--blue), 4px -2px var(--action);
-    /* animation: expand 1s ease-out; */
+  }
+}
+
+#home #slider{
+  width: 100%;
+  height: 100lvh;
+}
+
+#home #content{
+  display: grid;
+  grid-template-columns: 2fr 10fr 2fr;
+  grid-template-rows: 1fr;
+
+  & #main{
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  & #sidebar-left{
+    grid-column: 1;
+    grid-row: 1;
+    height: 100%;
+  }
+
+  & #sidebar-right{
+    grid-column: 3;
+    grid-row: 1;
+    height: 100%;
   }
 }
 
 @keyframes expand {
   0% {
-    letter-spacing: -0.3rem;
+    scale: 0.3;
     font-size: 4rem;
     opacity: 0;
   }
 
-  40% {
-    opacity: 0.6;
-  }
-
   100% {
     opacity: 1;
+    scale: 1;
   }
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
+@media only screen and (max-width: 800px) {
+  #home {
+    & #popular, #latest {
+      flex-direction: column;
+    }
 
-  #home #popular,
-  #home #latest {
-    flex-direction: column;
+    & #content{
+      grid-template-columns: 0fr 1fr 0fr;
+    }
+
+    & #latest{
+      padding: 2.5rem 0;
+    }
+
+    & #popular{
+      padding: 2.5rem 0;
+    }
+
+    & #welcome{
+      padding-bottom: 2.5rem;
+      & h1{
+        width: 90%;
+        font-size: 2.2rem;
+      }
+    }
   }
 }

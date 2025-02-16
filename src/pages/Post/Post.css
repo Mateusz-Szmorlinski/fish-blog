@@ -2,8 +2,8 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
     margin: 0;
     padding-top: 1.5rem;
     margin-top: 2rem;
@@ -20,6 +20,8 @@
 
 #post p{
     font-size: 1.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.05rem;
 }
 
 #post h1{
@@ -52,11 +54,16 @@
 
 @media screen and (max-aspect-ratio: 1/1) {
     #post{
-        width: 80%;
+        width: 90%;
         align-self: center;
 
         & h1{
+            font-size: 1.5rem;
             width: 100%;
+        }
+
+        & p{
+            font-size: 1rem;
         }
     }
 

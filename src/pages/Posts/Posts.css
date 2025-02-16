@@ -7,7 +7,7 @@
 }
 
 #posts #content{
-    min-width: 85%;
+    min-width: 95%;
     align-self: center;
     display: flex;
     flex-direction: row;
@@ -103,20 +103,22 @@
     }
 
     #posts #search{
-        height: 6rem;
+        height: 4.5rem;
 
         & input{
-            font-size: 4rem;
+            width: 60%;
+            left: 25%;
+            font-size: 2rem;
         }
 
         & img{
-            width: 4.5rem;
-            height: 4.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
         }
 
         & button{
-            width: 5rem;
-            height: 5rem;
+            width: 4rem;
+            height: 4rem;
             right: 1rem;
         }
     }

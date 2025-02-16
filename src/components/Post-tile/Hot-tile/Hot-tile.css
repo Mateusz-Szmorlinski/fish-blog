@@ -6,8 +6,8 @@
         z-index: 1;
         position: absolute;
         color: white;
-        padding: 0.4rem;
-        font-size: 0.6rem;
+        padding: 0.6rem;
+        font-size: 1.2rem;
         background: red;
         border-radius: 5px;
         top: 1.8rem;
@@ -18,10 +18,10 @@
 
 @media screen and (max-aspect-ratio: 1/1) {
     .hot-container{
-        margin: 4rem 0 4rem 0;
+        margin: 0rem 0 4rem 0;
 
         & .hot{
-            font-size: 5rem;
+            top: 0;
             padding: 1rem;
         }
     } 

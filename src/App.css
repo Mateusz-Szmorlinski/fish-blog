@@ -1,8 +1,15 @@
 :root {
     --grey: #808080;
-    --action: #4AB11F;
-    --blue: #1875A7;
+    --action: #4AB11F; 
+    --blue: #297ca8;
     --red: #AB1818;
+    --white: #EEEEEE;
+    --black: #080808;
+    --primary: #8FC48F;
+    --secondary: #BFE7BF;
+    --accent: #20a520;
+    --dark-green: #023902;
+    --dark-green-v2: #046504;
     --button-blue: linear-gradient(-160deg, #8cbad3ff, #5298bdff, #1875a7ff, #12587eff, #0c3b54ff);
     --button-action: linear-gradient(-160deg, #a5d88fff, #78c557ff, #4ab11fff, #388518ff, #255910ff);
 }
@@ -10,20 +17,37 @@
 body {
     margin: 0;
     padding: 0;
-    background: black;
+    background: var(--black);
 
-    & p {
+    & p{
         font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
     }
-        
 
+    & .poppins-font {
+        font-family: "Poppins", sans-serif;
+    }
+    
+    & .oswald-font {
+        font-family: "Oswald", serif;
+    }
 
-    & h1, h2, h3, button, a {
+    & .gabriela-font {
+        font-family: "Gabriela", serif;
+    }
+
+    & .space-mono-font {
+        font-family: "Space Mono", serif;
+    }
+
+    & .oxygen-mono-font {
+        font-family: "Oxygen Mono", serif;
+    }
+
+    & .nunito-font {
+        font-family: "Nunito", serif;
+    }
+
+    & .quicksand-font {
         font-family: "Quicksand", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
     }
 }

@@ -82,7 +82,7 @@ export const PostsProvider = ({ children }) => {
         setLoading(true);
         try {
             let q = query(collection(db, "posts"), where(field, "==", value));
-            let querySnapshot = await getDoc(q);
+            let querySnapshot = await getDocs(q);
             
             if (querySnapshot.empty) {
                 setLoading(false);

@@ -5,10 +5,10 @@ const ImageContext = createContext();
 
 export const useImage = () => useContext(ImageContext);
 
-export const ImageProvider = ({ children }) => {
+export function ImageProvider({ children }){
   const [images, setImages] = useState([]);
 
-  const uploadImage = async (file, path) => {
+  async function uploadImage(file, path) {
     const storageRef = ref(storage, path);
     await uploadBytes(storageRef, file);
     const url = await getDownloadURL(storageRef);
@@ -16,7 +16,7 @@ export const ImageProvider = ({ children }) => {
     return url;
   };
 
-  const fetchImageURL = async (path) => {
+  async function fetchImageURL(path) {
     const storageRef = ref(storage, path);
     const url = await getDownloadURL(storageRef);
     return url;

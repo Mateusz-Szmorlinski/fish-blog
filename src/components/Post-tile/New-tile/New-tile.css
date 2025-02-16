@@ -6,8 +6,8 @@
         z-index: 1;
         position: absolute;
         color: white;
-        padding: 0.4rem;
-        font-size: 0.6rem;
+        padding: 0.6rem;
+        font-size: 1.2rem;
         background: var(--action);
         border-radius: 5px;
         top: 1.8rem;
@@ -18,11 +18,11 @@
 
 @media screen and (max-aspect-ratio: 1/1) {
     .new-container{
-        margin: 4rem 0 4rem 0;
+        margin: 0rem 0 4rem 0;
 
         & .new{
-            font-size: 5rem;
             padding: 1rem;
+            top: 0;
         }
     }
 }

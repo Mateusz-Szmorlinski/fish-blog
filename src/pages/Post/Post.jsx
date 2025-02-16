@@ -8,7 +8,7 @@ import Loading from "../../components/Loading/Loading";
 
 function Post() {
     const { fetchImageURL } = useImage();
-    const [image, setImage] = useState(null);
+    // const [image, setImage] = useState(null);
     const [postData, setPostData] = useState(null);
     const { postTitle } = useParams();
     const { error, loading, fetchOnePost } = usePosts();
@@ -22,33 +22,33 @@ function Post() {
         }
     };
 
-    async function fetchImage() {
-        try {
-            let url = await fetchImageURL("/images/" + postData.image);
-            setImage(url);
-        } catch (err) {
-            console.error('Error fetching image URL:', err);
-        }
-    };
+    // async function fetchImage() {
+    //     try {
+    //         let url = await fetchImageURL("/images/" + postData.image);
+    //         setImage(url);
+    //     } catch (err) {
+    //         console.error('Error fetching image URL:', err);
+    //     }
+    // };
 
     useEffect(() => {
         fetchPostData();
     }, []);
 
-    useEffect(() => {
-        if (postData !== null) {
-            fetchImage();
-        }
-    }, [postData]);
+    // useEffect(() => {
+    //     if (postData !== null) {
+    //         fetchImage();
+    //     }
+    // }, [postData]);
 
     if (postData !== null) {
         return (
             <section id="post">
                 <div id="main">
-                    {image ? <img src={image} alt="Blog Post" /> : <Loading />}
-                    {postData && <h1>{postData.title}</h1>}
+                    {postData.image ? <img src={postData.image} alt="Blog Post" /> : <Loading />}
+                    {postData && <h1 className="oswald-font">{postData.title}</h1>}
                 </div>
-                {postData && <p>{postData.content}</p>}
+                {postData && <p className="poppins-font">{postData.content}</p>}
                 {!postData && <Loading />}
             </section>
         );

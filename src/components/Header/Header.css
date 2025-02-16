@@ -5,13 +5,14 @@ header {
     align-items: flex-start;
     align-items: center;
     justify-content: space-between;
-    height: 3rem;
+    height: 4rem;
     width: 100%;
-    background: black;
+    background: var(--secondary);
+    border-bottom: 5px solid var(--primary);
 }
 
 header h1 {
-    color: white;
+    color: var(--black);
     text-align: center;
     align-self: center;
     margin: 0;
@@ -28,28 +29,36 @@ header ul {
     margin-left: 10%;
 }
 
+header #normal-nav{
+    position: absolute;    
+    right: 10%;
+}
+
 header a {
+    font-weight: 400;
     text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
+    font-size: 2rem;
+    color: var(--black);
     margin: 0;
     margin-left: 2rem;
     transition: 0.5s;
+    text-transform: uppercase;
 }
 
 header .nav-link:hover {
-    color: var(--action);
+    color: var(--accent);
 }
 
 header #burger-button {
-    margin-right: 3rem;
+    display: none;
+    margin-right: 1rem;
     background: none;
     border: none;
     cursor: pointer;
 
     & img {
-        width: 7rem;
-        height: 7rem;
+        width: 3rem;
+        height: 4rem;
     }
 }
 
@@ -62,6 +71,12 @@ header #burger-nav {
     transition: 0.3s ease-out;
     z-index: 9;
 
+    & .nav-link{
+        color: var(--white);
+        font-size: 3rem;
+        margin: 0;
+    }
+
     & ul {
         position: relative;
         flex-direction: column;
@@ -69,36 +84,35 @@ header #burger-nav {
         align-items: center;
         text-align: center;
         top: 50%;
-        transform: translate(0%, -70%);
+        transform: translateY(-50%);
     }
 
     & button {
         position: absolute;
-        top: 3rem;
-        right: 3rem;
+        top: 0;
+        right: 0;
         background: none;
         border: none;
         cursor: pointer;
     }
 
     & img {
-        width: 10rem;
-        height: 10rem;
+        width: 5rem;
+        height: 5rem;
     }
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
-    header {
-        height: 10svh;
-    }
-
+@media (max-width: 800px) {
     header ul {
         margin-left: 0;
         padding: 0;
     }
 
-    header a {
-        font-size: 5rem;
-        margin-left: 0;
+    header #normal-nav {
+        display: none;
+    }
+
+    header #burger-button {
+        display: block;
     }
 }

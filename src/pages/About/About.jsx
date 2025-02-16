@@ -4,7 +4,7 @@ import "./About.css";
 function About() {
     return(
         <section id="about">
-            <h1>Aquarium Enthusiast Will Teach You What You Want To Know</h1>
+            <h1 className="oswald-font">Aquarium Enthusiast Will Teach You What You Want To Know</h1>
             <p>Welcome to my blog! With over 10 years of experience in fish keeping, I have 
                 cultivated a deep passion for this rewarding hobby. Over the years, I have honed my 
                 skills in maintaining healthy and thriving aquariums, learning the intricacies of fish 
