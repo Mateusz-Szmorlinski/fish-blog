@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: black;
+    background: var(--black);
     padding-top: 2rem;
 }
 
 #posts #content{
+    margin-top: 6rem;
     min-width: 95%;
     align-self: center;
     display: flex;

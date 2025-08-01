@@ -3,6 +3,7 @@ import Tile from "../../components/Post-tile/Tile";
 import { usePosts } from "../../Data/Posts/Posts";
 import "./Posts.css";
 import Loading from "../../components/Loading/Loading";
+import SEO from "../../components/SEO/SEO";
 
 function Posts() {
     const [item, setItem] = useState("");
@@ -45,8 +46,12 @@ function Posts() {
         fetchData();
     }, []);
 
+    const description = "Explore a comprehensive collection of freshwater aquarium articles, expert guides, fish care tutorials, species profiles, and in-depth insights for aquarium enthusiasts of all levels."
+    const keywords = "freshwater aquarium posts, fish care articles, aquarium guides, fish species information, tank maintenance tips, aquarium blog posts, fishkeeping tutorials, aquatic life articles, fish tank advice"
+
     return (
         <section id="posts">
+            <SEO title="Search Fish-Blog Posts" description={description} keywords={keywords}/>
             <form id="search" onSubmit={search}>
                 <input
                     type="text"
@@ -64,7 +69,7 @@ function Posts() {
                         key={index}
                         title={post.title}
                         image={post.image}
-                        text={post.content.substring(0, 100) + "..."}
+                        // text={post.content.substring(0, 100) + "..."}
                     />);
                 })) : <Loading />}
             </div>

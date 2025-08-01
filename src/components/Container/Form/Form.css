@@ -1,0 +1,43 @@
+.form {
+    overflow: auto;
+    margin: 1rem;
+    display: flex;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.form form{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.form form input{
+    border: 2px solid #008CFF;
+    border-radius: 2px;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    outline: none;
+}
+
+.form form button{
+    border-radius: 2px;
+    border: 2px solid #008CFF;
+    background-color: transparent;
+    color: #008CFF;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 900;
+}
+
+.form form button:hover{
+    color: #44ABFF;
+    border-color: #44ABFF;
+}

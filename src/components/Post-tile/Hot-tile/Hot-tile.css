@@ -18,10 +18,10 @@
 
 @media screen and (max-aspect-ratio: 1/1) {
     .hot-container{
-        margin: 0rem 0 4rem 0;
+        margin: 0rem 0 2rem 0;
 
         & .hot{
-            top: 0;
+            top: -5px;
             padding: 1rem;
         }
     } 

@@ -41,6 +41,7 @@ function ImageSlider({ slides }) {
 
     useEffect(() => {
         let interactionTimer;
+        console.log("slider "+slides);
     
         if (!change) {
             // Clear any existing timer and set a new one
@@ -69,6 +70,8 @@ function ImageSlider({ slides }) {
     //     }
     // };
   
+    // 🛡️ Early return if no slides
+    if (!slides || slides.length === 0 || !slides[current]) return null;
     
     
     return (

@@ -1,0 +1,25 @@
+.paragraph{
+    color: var(--white);
+
+    & img{
+        width: 60%;
+        height: auto;
+        margin: 1rem 2rem 1rem 2rem;
+
+        &.left{
+            float: left;
+        }
+
+        &.right{
+            float: right;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .paragraph{
+        & img{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+#floating-scroll{
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--dark-green);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+
+    & img{
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        rotate: -90deg;
+        left: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+}
+
+#floating-scroll:hover{
+    background-color: var(--dark-green-v2);
+}

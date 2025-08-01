@@ -34,18 +34,17 @@ function Header() {
 
     return (
         <header>
-            <h1><a className="gabriela-font" href="/">Fish Blog</a></h1>
-            {mobile && 
+            <h1><a className="gabriela-font" href="/">Fish-Blog</a></h1>
                 <div id="burger-nav" style={visibility ? {top: "0"} : {top: "-120svh"}}>
                     <ul>
                         <li><NavLink className="nav-link gabriela-font" onClick={toggleVisibility} to={"/"}>HOME</NavLink></li>
                         <li><NavLink className="nav-link gabriela-font" onClick={toggleVisibility} to={"/posts"}>Posts</NavLink></li>
                         <li><NavLink className="nav-link gabriela-font" onClick={toggleVisibility} to={"/about"}>About</NavLink></li>
                     </ul>
-                    <button onClick={toggleVisibility}><img src={process.env.PUBLIC_URL + "./icons/X.svg"}/></button>
-                </div>}
+                    <button onClick={toggleVisibility}><img src={process.env.PUBLIC_URL + "/icons/X.svg"}/></button>
+                </div>
             <button id="burger-button" onClick={toggleVisibility}>
-                <img src={process.env.PUBLIC_URL + "./icons/burger.svg"} />
+                <img src={process.env.PUBLIC_URL + "/icons/burger.svg"} />
             </button>
             <ul id="normal-nav">
                 <li><NavLink className="nav-link gabriela-font" to={"/"}>HOME</NavLink></li>

@@ -6,6 +6,10 @@
   background: var(--black);
 }
 
+#home .tile{
+  height: 90%;
+}
+
 #home .loading {
   width: 5rem;
   height: 5rem;

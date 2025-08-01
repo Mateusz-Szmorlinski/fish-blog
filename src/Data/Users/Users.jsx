@@ -76,9 +76,17 @@ export const UserProvider = ({ children }) => {
         }
     }
 
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setCurrentUser(user);
+            setLoading(false);
+        });
+        return () => unsubscribe();
+    }, []);
+
     return (
         <UserContext.Provider value={{ currentUser, error, registerUser, loginUser, logoutUser, updateUserField, getUserField }}>
-            {children}
+            {!loading && children}
         </UserContext.Provider>
     );
 };

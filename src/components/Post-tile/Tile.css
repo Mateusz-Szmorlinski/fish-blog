@@ -1,11 +1,11 @@
 .tile{
     position: relative;
     width: 20rem;
-    height: 90%;
-    color: white;
+    color: black;
     margin: 2rem 1rem 2rem 1rem;
-    background-color: color-mix(in srgb, var(--action), black 50%);
-    border-radius: 25px;
+    background-color: var(--primary);
+    border-radius: 5px;
+    border: solid 3px var(--primary);
 }
 
 .tile h3{
@@ -41,6 +41,10 @@
     width: 90%;
 }
 
+.tile button{
+    background-image: ('./icons/fish.svg') no-repeat center center;
+}
+
 .tile img{
     width: 20rem;
     vertical-align: middle;
@@ -53,11 +57,11 @@
 
 .tile a{
     text-decoration: none;
-    color: white;
+    color: black;
     transition: 0.3s ease-out;
 
     &:hover{
-        color: var(--action);
+        color: var(--dark-green-v2);
     }
 }
 
@@ -82,7 +86,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
-        margin: 1rem 0 1rem 0;
+        margin: 0rem 0 2rem 0;
     }
 
     .tile .image-wrapper{
